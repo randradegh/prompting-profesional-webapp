@@ -62,7 +62,7 @@ export function CurriculumSection() {
 
   const learningOutcomes = [
     'Escribir prompts que controlen el tono, estilo y formato de la IA',
-    'Aplicar frameworks como Chain of Thought y Few-Shot Learning',
+    'Aplicar técnicas de prompting como Chain of Thought y Few-Shot Learning',
     'Optimizar prompts para obtener resultados precisos',
     'Implementar técnicas avanzadas en cualquier modelo LLM',
     'Crear sistemas de prompting escalables y reutilizables',

@@ -59,9 +59,9 @@ export function PricingSection() {
                 </h3>
                 <div className="mb-6">
                 <div className="flex items-center justify-center space-x-2 mb-2">
-                  <span className="text-5xl font-bold text-primary-600 dark:text-primary-400">$1,200</span>
+                  <span className="text-5xl font-bold text-primary-600 dark:text-primary-400">$1,600</span>
                   <div className="text-left">
-                    <div className="text-sm text-gray-500 dark:text-gray-400 line-through">$1,500</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 line-through">$2,000</div>
                     <div className="text-sm text-green-600 dark:text-green-400 font-semibold">20% OFF</div>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export function PricingSection() {
 
               {/* CTA */}
               <button className="w-full btn-primary text-lg py-4 mb-4">
-                Inscríbete Ahora - $1,200 MXN
+                Inscríbete Ahora - $1,600 MXN
               </button>
 
               {/* Garantía */}

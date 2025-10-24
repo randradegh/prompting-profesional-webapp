@@ -75,12 +75,12 @@ export function InstructorSection() {
           >
             {/* Foto del instructor */}
             <div className="relative mb-8">
-              <div className="w-64 h-64 mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="w-150 h-80 mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/instructor/foto_instructor.png"
                   alt="Ing. Roberto Andrade Fonseca - Instructor del curso"
-                  width={256}
-                  height={256}
+                  width={320}
+                  height={320}
                   className="w-full h-full object-cover"
                   priority
                 />

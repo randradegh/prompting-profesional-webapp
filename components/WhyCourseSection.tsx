@@ -12,7 +12,7 @@ export function WhyCourseSection() {
     },
     {
       icon: Zap,
-      title: 'Frameworks Avanzados',
+      title: 'Estrategias Avanzadas',
       description: 'Domina técnicas como Chain of Thought, Few-Shot Learning, Role-Playing y Prompt Perfect para maximizar la efectividad.'
     },
     {
@@ -38,7 +38,7 @@ export function WhyCourseSection() {
   ]
 
   const stats = [
-    { icon: Users, value: '500+', label: 'Profesionales Capacitados' },
+    { icon: Users, value: '200+', label: 'Profesionales Capacitados' },
     { icon: TrendingUp, value: '95%', label: 'Aumento en Productividad' },
     { icon: Award, value: '4.9/5', label: 'Calificación del Curso' },
     { icon: Clock, value: '8h', label: 'Contenido Práctico' }
