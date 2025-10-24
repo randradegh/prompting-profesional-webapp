@@ -1,0 +1,166 @@
+# Product Requirement Document (PRD)
+## Proyecto: Sitio Web — "Prompting Profesional: Del Texto al Control Preciso de la IA"
+
+---
+
+### 1. Objetivo del Producto
+Crear un sitio web moderno, persuasivo y totalmente responsivo (web y móvil) para promover y convertir visitantes en inscritos al curso **“Prompting Profesional: Del Texto al Control Preciso de la IA”**, dirigido a usuarios intermedios de inteligencia artificial generativa.
+
+El sitio debe:
+- Captar interés mediante un diseño atractivo y una narrativa clara.
+- Guiar al visitante por el embudo de marketing (funnel) hasta la conversión.
+- Integrar modos **claro y oscuro**.
+- Ser optimizado para SEO y tiempos de carga rápidos.
+- Servir como base para futuras campañas y landing pages derivadas.
+
+---
+
+### 2. Público Objetivo
+**Usuarios intermedios de IA generativa**, incluyendo:
+- Consultores, analistas y estrategas digitales.
+- Profesionales que usan ChatGPT, Claude, Gemini o herramientas similares.
+- Docentes y capacitadores en temas de IA aplicada.
+- Emprendedores tecnológicos que desean mejorar su precisión y productividad al interactuar con modelos de lenguaje.
+
+**Necesidades clave:**
+1. Aprender a controlar resultados con precisión mediante técnicas de prompting avanzadas.
+2. Aumentar productividad en tareas automatizadas con IA.
+3. Obtener reconocimiento profesional y diferenciación.
+
+---
+
+### 3. Métricas de Éxito
+- **Conversión:** ≥ 8% de visitantes completan el formulario o inscripción.
+- **Tasa de rebote:** < 40%.
+- **Tiempo promedio en sitio:** > 2 min.
+- **CTR en botones principales (CTA):** ≥ 15%.
+- **Satisfacción visual (encuestas post-visita):** > 80%.
+
+---
+
+### 4. Estructura del Sitio (Funnel de Marketing)
+
+| Etapa del Funnel | Objetivo | Sección/Elemento |
+|------------------|-----------|------------------|
+| **Awareness (Atracción)** | Llamar la atención y despertar interés | Hero section con título impactante, video corto o animación y CTA primario |
+| **Interest (Interés)** | Explicar el valor del curso | Sección “Por qué este curso” con beneficios claros y visuales |
+| **Desire (Deseo)** | Generar deseo de pertenecer | Testimonios, credenciales del instructor, ejemplos reales de prompts |
+| **Action (Acción)** | Motivar la inscripción | Botón “Inscríbete ahora” con formulario corto y ofertas limitadas |
+| **Retention (Fidelización)** | Mantener conexión | Newsletter, acceso a recursos gratuitos y próximos cursos |
+
+---
+
+### 5. Estructura de Contenido
+
+#### 5.1. Home Page
+- **Hero Section**
+  - Título: “Prompting Profesional: Del Texto al Control Preciso de la IA”
+  - Subtítulo: “Domina las técnicas más avanzadas para obtener exactamente lo que deseas de la inteligencia artificial.”
+  - CTA: “Comienza Ahora” / “Reserva tu lugar”
+  - Imagen o video demostrativo del uso efectivo de prompts.
+
+- **Sección: ¿Por qué este curso?**
+  - Bullets con beneficios concretos:
+    - Aprende a escribir prompts que controlan el tono, estilo y formato de la IA.
+    - Domina frameworks como *Prompt Perfect*, *Chain of Thought* y *Few-Shot Prompting*.
+    - Aumenta tu productividad con estrategias aplicables a cualquier modelo LLM.
+
+- **Sección: Lo que aprenderás**
+  - Módulos o temas destacados.
+  - Gráficos o íconos representativos.
+  - Enlace a plan de estudios detallado (PDF o modal interactivo).
+
+- **Sección: Sobre el instructor**
+  - Breve biografía con foto profesional.
+  - Enlace a perfil LinkedIn o blog.
+
+- **Sección: Testimonios / Casos de éxito**
+  - 3 a 5 testimonios visuales con foto o avatar.
+  - Opcional: calificación por estrellas.
+
+- **Sección: Planes y precios**
+  - Opción única o escalonada.
+  - CTA secundaria: “Quiero aprender ahora”.
+
+- **Sección: Preguntas frecuentes (FAQ)**
+  - Preguntas comunes sobre duración, acceso y nivel de dificultad.
+
+- **Footer**
+  - Links a políticas, contacto, redes y newsletter.
+
+---
+
+### 6. Requerimientos de Diseño
+
+#### 6.1. Estilo Visual
+- **Modo claro y oscuro** (automático o con toggle manual).
+- Paleta de colores:
+  - Claro: fondo #FFFFFF, acentos #0055FF y gris #222222.
+  - Oscuro: fondo #0F172A, acentos #3B82F6 y texto #E2E8F0.
+- Tipografía moderna (ej. *Inter*, *Roboto* o *Poppins*).
+- Diseño basado en tarjetas con esquinas redondeadas y sombras suaves.
+- Animaciones sutiles al hacer hover en botones y tarjetas.
+- Iconografía con estilo lineal (Lucide o Remix Icons).
+
+#### 6.2. Responsividad
+- **Diseño mobile-first**.
+- Menú tipo hamburguesa en móvil.
+- Ajuste fluido en pantallas de 320 a 1440 px.
+- Imágenes optimizadas y adaptativas (WebP).
+
+---
+
+### 7. Requerimientos Técnicos
+- **Framework Frontend:** React + Tailwind CSS (opcional: Next.js).
+- **Gestor de contenido:** Markdown o CMS ligero (ej. Sanity, Contentlayer).
+- **Hosting sugerido:** Vercel o Netlify.
+- **Integraciones:**
+  - Formulario con envío a correo o Google Sheets.
+  - Google Analytics o Plausible.
+  - SEO tags (meta title, description, Open Graph).
+  - Newsletter: integración con Mailchimp o ConvertKit.
+- **Modo oscuro:** mediante `prefers-color-scheme` + toggle manual.
+
+---
+
+### 8. Contenidos y Recursos
+- Logotipo del curso (SVG).
+- Video introductorio (30–60 s).
+- Fotografías o renders ilustrativos de interacción con IA.
+- Testimonios (texto + avatar).
+- Biografía del instructor.
+
+---
+
+### 9. Cronograma de Desarrollo
+
+| Fase | Entregable | Duración estimada |
+|------|-------------|------------------|
+| 1. Diseño UX/UI | Wireframes + mockups modo claro/oscuro | 1 semana |
+| 2. Implementación Frontend | Versión funcional en React/Tailwind | 2 semanas |
+| 3. Integraciones y pruebas | Formularios, SEO, performance | 1 semana |
+| 4. Lanzamiento | Publicación en dominio y pruebas A/B | 1 semana |
+
+**Duración total estimada:** 4 semanas.
+
+---
+
+### 10. Riesgos y Consideraciones
+- Retraso en la entrega de materiales (videos, testimonios).
+- Falta de integración inicial con plataforma de pago o LMS.
+- Necesidad de ajustes según resultados de las pruebas A/B iniciales.
+
+---
+
+### 11. Versionado
+- **Versión 1.0:** Página de promoción completa con CTA.
+- **Versión 1.1:** Integración con pagos o LMS.
+- **Versión 1.2:** Recursos descargables y módulos gratuitos.
+
+---
+
+### 12. CTA Principal
+**“Domina la conversación con la IA. Transforma tus ideas en resultados precisos.”**  
+Botón: **→ Quiero comenzar ahora**
+
+---
