@@ -27,9 +27,6 @@ export function Header() {
             </div>
             <div className="flex items-center space-x-4">
               <div className="w-10 h-10 bg-gray-200 dark:bg-dark-700 rounded-lg animate-pulse"></div>
-              <button className="btn-primary hidden md:block">
-                Comienza Ahora
-              </button>
             </div>
           </div>
         </div>
@@ -87,9 +84,6 @@ export function Header() {
               )}
             </button>
 
-            <button className="btn-primary hidden md:block">
-              Comienza Ahora
-            </button>
 
             {/* Mobile menu button */}
             <button

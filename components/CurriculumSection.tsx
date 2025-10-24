@@ -177,32 +177,6 @@ export function CurriculumSection() {
           </div>
         </motion.div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <div className="bg-white dark:bg-dark-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-dark-700">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              ¿Listo para comenzar tu transformación?
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-              Accede a contenido exclusivo, ejercicios prácticos y una comunidad de profesionales 
-              que están revolucionando su forma de trabajar con IA.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary text-lg px-8 py-4">
-                Inscríbete Ahora
-              </button>
-              <button className="btn-secondary text-lg px-8 py-4">
-                Descargar Programa Completo
-              </button>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

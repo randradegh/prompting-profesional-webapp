@@ -91,22 +91,6 @@ export function HeroSection() {
               </div>
             </motion.div>
 
-            {/* CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <button className="btn-primary text-lg px-8 py-4 flex items-center justify-center group">
-                Comienza Ahora
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </button>
-              <button className="btn-secondary text-lg px-8 py-4 flex items-center justify-center group">
-                <Play className="mr-2 h-5 w-5" />
-                Ver Demo
-              </button>
-            </motion.div>
 
             {/* Estadísticas */}
             <motion.div

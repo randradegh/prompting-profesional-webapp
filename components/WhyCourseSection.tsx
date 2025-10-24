@@ -132,27 +132,6 @@ export function WhyCourseSection() {
           </div>
         </motion.div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <div className="bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-700 dark:to-primary-800 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              ¿Listo para dominar la IA?
-            </h3>
-            <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-              Únete a cientos de profesionales que ya están obteniendo resultados excepcionales 
-              con las técnicas de prompting más avanzadas.
-            </p>
-            <button className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg">
-              Comienza tu Transformación
-            </button>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

@@ -2,23 +2,24 @@
 
 import { Award, Linkedin, Twitter, Github, Users, BookOpen, Star } from 'lucide-react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export function InstructorSection() {
   const credentials = [
     {
       icon: Award,
-      title: 'Experto en IA',
-      description: 'Más de 5 años trabajando con modelos de lenguaje y sistemas de IA'
+      title: 'Experto en Análisis de Datos',
+      description: 'Más de 10 años trabajando con base de datos y análisis de datos'
     },
     {
       icon: Users,
       title: '500+ Estudiantes',
-      description: 'Ha capacitado a cientos de profesionales en técnicas de prompting'
+      description: 'Ha capacitado a cientos de profesionales en sistemas de información, SQL, análisis de datos y técnicas de prompting'
     },
     {
       icon: BookOpen,
-      title: 'Investigador',
-      description: 'Publicaciones en conferencias internacionales sobre IA generativa'
+      title: 'Divulgador de Tecnología',
+      description: 'Mantiene un blog en Hashnode sobre tecnologías de la Información, en especial acerca de la IA Generativa y la llamada «Ingeniería de Peticiones»'
     },
     {
       icon: Star,
@@ -28,12 +29,20 @@ export function InstructorSection() {
   ]
 
   const achievements = [
-    'Consultor senior en IA para empresas Fortune 500',
-    'Autor de múltiples papers sobre prompting y LLMs',
-    'Speaker en conferencias internacionales de IA',
-    'Fundador de la comunidad "Prompting Professionals"',
-    'Certificado en Machine Learning por Stanford',
-    'Ex-Google AI Research Engineer'
+    'Consultor senior en bases de datos relacionales y análisis de datos',
+    <>
+      Escribe sobre tecnología y en especial sobre AI Generativa en{' '}
+      <a
+        href="https://randradedev.hashnode.dev/"
+        className="text-primary-600 hover:underline"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Hashnode
+      </a>
+    </>,
+    'Speaker en conferencias en varias universidades nacionales',
+    'Fundador del movimiento del software libre en México'
   ]
 
   return (
@@ -66,15 +75,15 @@ export function InstructorSection() {
           >
             {/* Foto del instructor */}
             <div className="relative mb-8">
-              <div className="w-64 h-64 mx-auto lg:mx-0 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/30 dark:to-primary-800/30 rounded-2xl flex items-center justify-center shadow-2xl">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-4xl font-bold text-white">AI</span>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 font-medium">
-                    Foto del Instructor
-                  </p>
-                </div>
+              <div className="w-64 h-64 mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/instructor/foto_instructor.png"
+                  alt="Ing. Roberto Andrade Fonseca - Instructor del curso"
+                  width={256}
+                  height={256}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
               
               {/* Elementos decorativos */}
@@ -83,15 +92,21 @@ export function InstructorSection() {
             </div>
 
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              Dr. Alejandro Martínez
+              Ing. Roberto Andrade Fonseca
             </h3>
             <p className="text-primary-600 dark:text-primary-400 font-semibold mb-4">
-              Experto en Inteligencia Artificial y Prompting
+              Experto en Inteligencia Artificial Generativa y Prompting
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              Con más de 5 años de experiencia en el campo de la IA, Alejandro ha sido pionero 
+              Con más de 25 años de experiencia en el campo de las TIC, Roberto ha sido pionero 
               en el desarrollo de técnicas de prompting avanzadas. Su trabajo ha ayudado a 
-              transformar la productividad de cientos de profesionales y empresas.
+              transformar la productividad de cientos de profesionales y empresas.</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              Es profesor de la <b>Maestría en Alta Dirección</b> de la <b>Facultad de Química</b> de la <b>UNAM</b> en las asignaturas de <i>Sistemas de Información Gerencial</i> y <i>Comercialización</i>.
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              Ha impartido varios cursos acerca de AI Generativa a profesores y profesionales 
+              de varias verticales en los últimos tres años.
             </p>
 
             {/* Redes sociales */}
@@ -175,10 +190,10 @@ export function InstructorSection() {
               </blockquote>
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold">AM</span>
+                  <span className="text-sm font-bold">RA</span>
                 </div>
                 <div>
-                  <div className="font-semibold">Dr. Alejandro Martínez</div>
+                  <div className="font-semibold">Ing. Roberto Andrade Fonseca</div>
                   <div className="text-primary-100 text-sm">Instructor del Curso</div>
                 </div>
               </div>
