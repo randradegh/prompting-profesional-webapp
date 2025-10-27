@@ -111,35 +111,6 @@ export function FAQSection() {
             ))}
           </div>
 
-          {/* CTA final */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mt-16 text-center"
-          >
-            <div className="bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-700 dark:to-primary-800 rounded-2xl p-8 text-white">
-              <div className="flex items-center justify-center mb-4">
-                <HelpCircle className="h-8 w-8 mr-3" />
-                <h3 className="text-2xl font-bold">
-                  ¿Tienes más preguntas?
-                </h3>
-              </div>
-              <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
-                Nuestro equipo está aquí para ayudarte. Contáctanos y te responderemos 
-                en menos de 24 horas.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg">
-                  Contactar Soporte
-                </button>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-8 rounded-lg transition-all duration-200">
-                  Inscríbete Ahora
-                </button>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
