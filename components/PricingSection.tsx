@@ -145,7 +145,7 @@ export function PricingSection() {
                     <a href="mailto:randradedev@gmail.com" className="text-primary-600 dark:text-primary-400 hover:underline font-semibold">
                       randradedev@gmail.com
                     </a>{' '}
-                    solicitando la inscripción al "Curso Técnicas Avanzadas de Prompting".
+                    solicitando la inscripción al &ldquo;Curso Técnicas Avanzadas de Prompting&rdquo;.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300">
                     A vuelta de correo se te solicitarán algunos datos académicos y conocerás la manera de inscribirte y realizar tu pago del curso.

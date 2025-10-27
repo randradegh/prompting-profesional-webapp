@@ -1,6 +1,6 @@
-# Prompting Profesional - Sitio Web
+# Curso Técnicas Avanzadas de Prompting - Sitio Web
 
-Sitio web moderno y responsivo para el curso "Prompting Profesional: Del Texto al Control Preciso de la IA".
+Sitio web moderno y responsivo para el curso "Técnicas Avanzadas de Prompting" impartido por el Ing. Roberto Andrade Fonseca.
 
 ## 🚀 Características
 
@@ -20,12 +20,39 @@ Sitio web moderno y responsivo para el curso "Prompting Profesional: Del Texto a
 - **Lucide React**: Iconografía moderna
 - **Responsive Design**: Mobile-first approach
 
+## 📋 Información del Curso
+
+### 🎯 Objetivo
+Dominar las técnicas más avanzadas de prompting para obtener resultados excepcionales con la Inteligencia Artificial Generativa.
+
+### 👨‍🏫 Instructor
+**Ing. Roberto Andrade Fonseca**
+- Experto en Análisis de Datos con más de 10 años de experiencia
+- Profesor de la Maestría en Alta Dirección de la Facultad de Química de la UNAM
+- Divulgador de tecnología especializado en IA Generativa e Ingeniería de Peticiones
+- Consultor senior en bases de datos relacionales y análisis de datos
+- Fundador del movimiento del software libre en México
+
+### 📅 Fechas y Horario
+- **Fechas**: 10 al 13 de noviembre de 2025
+- **Horario**: De 19 a 21 horas
+- **Modalidad**: A Distancia vía Google Meet
+- **Duración**: 8 horas de contenido premium
+
+### 💰 Inversión
+- **Precio**: $1,600 MXN (20% de descuento)
+- **Precio regular**: $2,000 MXN
+- **IVA**: Adicionar si requiere factura
+
+### 📧 Inscripción
+Para inscribirte, envía un correo a **randradedev@gmail.com** solicitando la inscripción al "Curso Técnicas Avanzadas de Prompting".
+
 ## 📦 Instalación
 
 1. **Clonar el repositorio**
    ```bash
    git clone <repository-url>
-   cd prompting-profesional-webapp
+   cd curso-prompting-webapp
    ```
 
 2. **Instalar dependencias**
@@ -172,12 +199,19 @@ Para agregar Google Analytics:
 
 Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 
-## 📞 Soporte
+## 📞 Contacto
 
-Para soporte técnico o preguntas:
-- Email: soporte@promptingpro.com
-- GitHub Issues: [Crear issue](https://github.com/tu-repo/issues)
+Para información del curso o soporte técnico:
+- **Email**: randradedev@gmail.com
+- **Teléfono**: +52 (55) 2576-5962
+- **Blog**: [randradedev.hashnode.dev](https://randradedev.hashnode.dev/)
+
+## 📚 Recursos Adicionales
+
+- **Blog del instructor**: Artículos sobre IA Generativa e Ingeniería de Peticiones
+- **Comunidad**: Únete a la comunidad de profesionales que dominan el prompting
+- **Actualizaciones**: Recibe las últimas técnicas y mejores prácticas
 
 ---
 
-**Desarrollado con ❤️ para profesionales de la IA**
+**Desarrollado con ❤️ para profesionales que buscan dominar la IA Generativa**

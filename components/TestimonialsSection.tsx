@@ -133,7 +133,7 @@ export function TestimonialsSection() {
 
               {/* Testimonial text */}
               <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </p>
 
               {/* Result highlight */}

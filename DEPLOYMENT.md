@@ -1,236 +1,195 @@
-# 🚀 Guía de Despliegue - Prompting Profesional
+# Guía de Despliegue en Netlify
 
-Esta guía te ayudará a desplegar el sitio web en diferentes plataformas.
+Esta guía te ayudará a desplegar el sitio web del curso "Técnicas Avanzadas de Prompting" en Netlify.
 
-## 📋 Pre-requisitos
+## 🚀 Despliegue Automático
 
-- Cuenta en la plataforma de hosting elegida
-- Repositorio en GitHub/GitLab
-- Dominio (opcional pero recomendado)
+### Opción 1: Conectar con GitHub (Recomendado)
 
-## 🌐 Opciones de Despliegue
+1. **Subir el código a GitHub**
+   ```bash
+   git add .
+   git commit -m "Preparar para despliegue en Netlify"
+   git push origin main
+   ```
 
-### 1. Vercel (Recomendado)
+2. **Conectar con Netlify**
+   - Ve a [netlify.com](https://netlify.com)
+   - Inicia sesión o crea una cuenta
+   - Haz clic en "New site from Git"
+   - Conecta tu repositorio de GitHub
+   - Configura las siguientes opciones:
+     - **Build command**: `npm run build`
+     - **Publish directory**: `out`
+     - **Node version**: `18`
 
-**Ventajas:**
-- Optimizado para Next.js
-- Deploy automático
-- CDN global
-- SSL automático
+3. **Configuración automática**
+   - Netlify detectará automáticamente el archivo `netlify.toml`
+   - El despliegue se realizará automáticamente
 
-**Pasos:**
-1. Conectar cuenta de GitHub a Vercel
-2. Importar repositorio
-3. Configurar variables de entorno (opcional)
-4. Deploy automático
+### Opción 2: Despliegue Manual
 
-**Variables de entorno recomendadas:**
-```
-NEXT_PUBLIC_SITE_URL=https://tu-dominio.com
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
-```
+1. **Construir el proyecto**
+   ```bash
+   npm run build
+   ```
 
-### 2. Netlify
+2. **Subir archivos a Netlify**
+   - Ve a [netlify.com](https://netlify.com)
+   - Arrastra la carpeta `out` a la zona de "Deploy manually"
+   - O usa la CLI de Netlify:
+     ```bash
+     npm install -g netlify-cli
+     netlify deploy --prod --dir=out
+     ```
 
-**Ventajas:**
-- Fácil configuración
-- Formularios integrados
-- CDN global
+## ⚙️ Configuración del Proyecto
 
-**Configuración:**
-- Build command: `npm run build`
-- Publish directory: `.next`
-- Node version: 18
+### Archivos de Configuración
 
-### 3. AWS Amplify
+- **`netlify.toml`**: Configuración principal de Netlify
+- **`public/_redirects`**: Redirecciones para SPA
+- **`next.config.js`**: Configuración de Next.js para export estático
 
-**Ventajas:**
-- Escalabilidad
-- Integración con AWS
-- CI/CD automático
+### Variables de Entorno (si es necesario)
 
-### 4. DigitalOcean App Platform
+Si necesitas variables de entorno, agrégalas en:
+- Netlify Dashboard → Site settings → Environment variables
 
-**Ventajas:**
-- Precio competitivo
-- Fácil escalado
-- Buena documentación
+## 🔧 Configuración de Build
 
-## 🔧 Configuración Post-Despliegue
-
-### 1. Dominio Personalizado
-
-1. Comprar dominio
-2. Configurar DNS:
-   - A record → IP del servidor
-   - CNAME www → tu-dominio.com
-3. Configurar SSL (automático en Vercel/Netlify)
-
-### 2. Analytics
-
-**Google Analytics:**
-1. Crear cuenta en Google Analytics
-2. Obtener ID de seguimiento
-3. Agregar a variables de entorno
-
-**Configuración en el código:**
-```typescript
-// app/layout.tsx
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID
-```
-
-### 3. Formularios
-
-**Opción 1: Formspree**
-1. Crear cuenta en Formspree
-2. Crear formulario
-3. Obtener endpoint
-4. Configurar en variables de entorno
-
-**Opción 2: Netlify Forms**
-- Automático si usas Netlify
-- No requiere configuración adicional
-
-### 4. Email Marketing
-
-**Mailchimp:**
-1. Crear cuenta
-2. Obtener API key
-3. Configurar webhook
-
-**ConvertKit:**
-1. Crear cuenta
-2. Configurar formularios
-3. Integrar API
-
-## 📊 Monitoreo y Performance
-
-### 1. Core Web Vitals
-
-- **LCP**: < 2.5s
-- **FID**: < 100ms
-- **CLS**: < 0.1
-
-### 2. Herramientas de Monitoreo
-
-- **Vercel Analytics**: Automático
-- **Google PageSpeed**: https://pagespeed.web.dev/
-- **GTmetrix**: https://gtmetrix.com/
-
-### 3. Optimizaciones
-
+### Comandos de Build
 ```bash
-# Optimizar imágenes
+# Instalar dependencias
+npm install
+
+# Construir para producción
 npm run build
 
-# Verificar bundle size
-npm run analyze
+# El resultado estará en la carpeta 'out'
 ```
+
+### Estructura de Archivos de Salida
+```
+out/
+├── index.html
+├── _next/
+│   ├── static/
+│   └── ...
+├── images/
+└── ...
+```
+
+## 🌐 Configuración de Dominio
+
+### Dominio Personalizado
+1. Ve a Site settings → Domain management
+2. Agrega tu dominio personalizado
+3. Configura los registros DNS según las instrucciones de Netlify
+
+### SSL/HTTPS
+- Netlify proporciona SSL automático
+- Se activa automáticamente para dominios de Netlify
+- Para dominios personalizados, sigue las instrucciones de Netlify
+
+## 📊 Monitoreo y Analytics
+
+### Netlify Analytics
+- Activa Netlify Analytics en Site settings
+- Monitorea visitas, páginas más populares, etc.
+
+### Google Analytics (Opcional)
+Para agregar Google Analytics, edita `app/layout.tsx`:
+
+```typescript
+// Agregar en el <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script
+  dangerouslySetInnerHTML={{
+    __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    `,
+  }}
+/>
+```
+
+## 🔄 Despliegues Automáticos
+
+### GitHub Integration
+- Cada push a la rama `main` activará un nuevo despliegue
+- Los pull requests pueden generar previews automáticos
+
+### Webhooks
+- Configura webhooks para otros repositorios si es necesario
+- Ve a Site settings → Build & deploy → Build hooks
+
+## 🐛 Solución de Problemas
+
+### Build Fails
+1. Revisa los logs de build en Netlify Dashboard
+2. Verifica que todas las dependencias estén en `package.json`
+3. Asegúrate de que el Node.js version sea compatible
+
+### 404 Errors
+1. Verifica que `public/_redirects` esté presente
+2. Revisa la configuración de `netlify.toml`
+3. Asegúrate de que `output: 'export'` esté en `next.config.js`
+
+### Images Not Loading
+1. Verifica que `images.unoptimized: true` esté en `next.config.js`
+2. Asegúrate de que las imágenes estén en `public/images/`
+
+## 📱 Testing Post-Despliegue
+
+### Checklist
+- [ ] El sitio carga correctamente
+- [ ] Todas las imágenes se muestran
+- [ ] Los enlaces funcionan
+- [ ] El modo oscuro/claro funciona
+- [ ] El sitio es responsive
+- [ ] Los formularios funcionan (si los hay)
+- [ ] El SEO está configurado correctamente
+
+### Herramientas de Testing
+- [PageSpeed Insights](https://pagespeed.web.dev/)
+- [GTmetrix](https://gtmetrix.com/)
+- [WebPageTest](https://www.webpagetest.org/)
 
 ## 🔒 Seguridad
 
-### 1. Headers de Seguridad
+### Headers de Seguridad
+El archivo `netlify.toml` incluye headers de seguridad:
+- X-Frame-Options: DENY
+- X-XSS-Protection: 1; mode=block
+- X-Content-Type-Options: nosniff
+- Referrer-Policy: strict-origin-when-cross-origin
 
-```javascript
-// next.config.js
-const securityHeaders = [
-  {
-    key: 'X-DNS-Prefetch-Control',
-    value: 'on'
-  },
-  {
-    key: 'X-XSS-Protection',
-    value: '1; mode=block'
-  }
-]
-```
+### HTTPS
+- Netlify fuerza HTTPS automáticamente
+- Los certificados SSL se renuevan automáticamente
 
-### 2. Variables de Entorno
+## 📈 Optimización
 
-- Nunca commitear `.env.local`
-- Usar variables de entorno del hosting
-- Rotar keys regularmente
+### Performance
+- Las imágenes están optimizadas con Next.js
+- Los archivos estáticos tienen cache headers apropiados
+- El CSS y JS están minificados
 
-## 🚀 Comandos de Despliegue
+### SEO
+- Meta tags configurados en `app/layout.tsx`
+- Sitemap automático (si se configura)
+- URLs amigables
 
-### Desarrollo Local
-```bash
-npm run dev
-```
+## 🆘 Soporte
 
-### Build de Producción
-```bash
-npm run build
-npm run start
-```
-
-### Verificación Pre-Deploy
-```bash
-npm run lint
-npm run build
-npm run start
-```
-
-## 📈 Optimizaciones de Performance
-
-### 1. Imágenes
-- Usar formato WebP
-- Optimizar tamaños
-- Lazy loading
-
-### 2. CSS/JS
-- Minificación automática
-- Tree shaking
-- Code splitting
-
-### 3. Caching
-- Headers de cache
-- CDN configuration
-- Service workers (PWA)
-
-## 🐛 Troubleshooting
-
-### Error: Build Failed
-```bash
-# Limpiar cache
-rm -rf .next
-npm run build
-```
-
-### Error: Module Not Found
-```bash
-# Reinstalar dependencias
-rm -rf node_modules package-lock.json
-npm install
-```
-
-### Error: Environment Variables
-- Verificar variables en panel de hosting
-- Revisar sintaxis de archivos .env
-- Reiniciar deployment
-
-## 📞 Soporte
-
-Si encuentras problemas:
-
-1. **Revisar logs** en panel de hosting
-2. **Verificar configuración** de variables de entorno
-3. **Consultar documentación** de la plataforma
-4. **Contactar soporte** del hosting
-
-## 🎯 Checklist Pre-Launch
-
-- [ ] Build exitoso sin errores
-- [ ] Variables de entorno configuradas
-- [ ] Dominio configurado
-- [ ] SSL habilitado
-- [ ] Analytics funcionando
-- [ ] Formularios probados
-- [ ] Performance optimizada
-- [ ] SEO configurado
-- [ ] Mobile responsive
-- [ ] Cross-browser testing
+Si tienes problemas con el despliegue:
+1. Revisa los logs de build en Netlify
+2. Consulta la [documentación de Netlify](https://docs.netlify.com/)
+3. Contacta al desarrollador: randradedev@gmail.com
 
 ---
 
-**¡Tu sitio web está listo para conquistar el mundo del prompting profesional! 🚀**
+**¡Tu sitio web del curso estará listo para recibir estudiantes!** 🎓

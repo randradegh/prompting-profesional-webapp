@@ -184,9 +184,9 @@ export function InstructorSection() {
             {/* Testimonial del instructor */}
             <div className="bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-700 dark:to-primary-800 rounded-2xl p-6 text-white">
               <blockquote className="text-lg italic mb-4">
-                "Mi misión es democratizar el acceso a las técnicas más avanzadas de prompting. 
+                &ldquo;Mi misión es democratizar el acceso a las técnicas más avanzadas de prompting. 
                 No se trata solo de usar IA, sino de dominarla y obtener resultados excepcionales 
-                que transformen tu carrera profesional."
+                que transformen tu carrera profesional.&rdquo;
               </blockquote>
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
