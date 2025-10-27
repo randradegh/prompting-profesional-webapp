@@ -13,7 +13,7 @@ export function WhyCourseSection() {
     {
       icon: Zap,
       title: 'Estrategias Avanzadas',
-      description: 'Domina técnicas como Chain of Thought, Few-Shot Learning, Role-Playing y Prompt Perfect para maximizar la efectividad.'
+      description: 'Domina técnicas como Chain of Thought, Few-Shot Learning, Role-Playing y Prompt Perfect, además de las más actuales: Vibe Code, Spec Kit y Claude Skills para maximizar la efectividad.'
     },
     {
       icon: Target,

@@ -7,7 +7,7 @@ export function PricingSection() {
   const features = [
     '8 horas de contenido premium',
     '4 módulos estructurados',
-    'Ejercicios prácticos incluidos',
+    'Ejercicios prácticos incluídos',
     'Comunidad exclusiva',
     'Soporte directo del instructor',
     'Actualizaciones gratuitas',

@@ -13,16 +13,8 @@ export function FAQSection() {
       answer: 'Este curso está diseñado para usuarios intermedios de IA. Si ya has usado ChatGPT, Claude o herramientas similares y quieres mejorar tus resultados, este curso es perfecto para ti. No necesitas conocimientos técnicos avanzados.'
     },
     {
-      question: '¿Cuánto tiempo necesito para completar el curso?',
-      answer: 'El curso tiene 8 horas de contenido estructurado, pero puedes completarlo a tu propio ritmo. La mayoría de estudiantes lo terminan en 1-2 semanas dedicando 1 hora diaria. Tienes acceso de por vida, así que puedes revisar el contenido cuando quieras.'
-    },
-    {
       question: '¿Funcionan estas técnicas con cualquier modelo de IA?',
       answer: '¡Absolutamente! Las técnicas que aprenderás son universales y funcionan con ChatGPT, Claude, Gemini, y cualquier modelo de lenguaje grande (LLM). Te enseñamos a adaptar las técnicas según la plataforma que uses.'
-    },
-    {
-      question: '¿Recibo algún certificado al completar el curso?',
-      answer: 'Sí, al completar el curso recibirás un certificado oficial de "Prompting Profesional" que puedes agregar a tu LinkedIn y CV. Este certificado es reconocido en la industria.'
     },
     {
       question: '¿Hay soporte disponible durante el curso?',

@@ -55,7 +55,10 @@ export function HeroSection() {
               className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl"
             >
               Domina las técnicas más avanzadas para obtener exactamente lo que deseas de la inteligencia artificial. 
-              Aprende frameworks como Chain of Thought, Few-Shot Learning y Prompt Perfect.
+              Aprende técnicas como Chain of Thought, Few-Shot Learning y Prompt Perfect y lo más actual:{' '}
+              <span className="font-bold text-primary-600 dark:text-primary-400">
+                Vibe Code, Spec Kit y Claude Skills
+              </span>.
             </motion.p>
 
             {/* Beneficios clave */}

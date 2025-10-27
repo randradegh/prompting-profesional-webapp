@@ -19,7 +19,20 @@ export function InstructorSection() {
     {
       icon: BookOpen,
       title: 'Divulgador de Tecnología',
-      description: 'Mantiene un blog en Hashnode sobre tecnologías de la Información, en especial acerca de la IA Generativa y la llamada «Ingeniería de Peticiones»'
+      description: (
+        <>
+          Mantiene un blog en{' '}
+          <a
+            href="https://randradedev.hashnode.dev/"
+            className="text-primary-600 dark:text-primary-400 hover:underline font-semibold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hashnode
+          </a>{' '}
+          sobre tecnologías de la Información, en especial acerca de la IA Generativa y la llamada «Ingeniería de Peticiones»
+        </>
+      )
     },
     {
       icon: Star,
