@@ -39,7 +39,6 @@ export function Header() {
     { name: 'Por qué este curso', href: '#por-que' },
     { name: 'Lo que aprenderás', href: '#curriculum' },
     { name: 'Instructor', href: '#instructor' },
-    { name: 'Testimonios', href: '#testimonios' },
     { name: 'Precios', href: '#precios' },
     { name: 'FAQ', href: '#faq' },
   ]
